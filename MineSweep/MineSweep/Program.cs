@@ -11,13 +11,11 @@ namespace MineSweep
     {
         static void Main(string[] args)
         {
-            Grid newGame = new Grid(10, 10, 2);
+            Grid newGame = new Grid(10, 10, 10);
             Console.WriteLine(newGame.ToString());
 
             //Console.WriteLine(newGame.Mines);
             
-            
-
             Console.ReadLine();
         }
     }
@@ -47,26 +45,32 @@ namespace MineSweep
             {
                 for (int indexY = 0; indexY < y; indexY++)
                 {
-                    adjacentMine(indexX, indexY);
+                    grid[indexX, indexY].AdjMines = adjacentMine(indexX, indexY);
                 }
             }
             //Mines = mines;
             
         }
-
+        // checking currrent cell for adjacent mines
         public int adjacentMine(int row, int column)
         {
             int nearByBomb = 0;
+            // check only if there is no bomb in the cell
             if(grid[row, column].Mine != true)
             {
+                // checking row starting from -1, 0, and 1 from the current cell
                 for(int checkRow = -1; checkRow < 2; checkRow++)
                 {
+                    // checking column starting from -1, 0, and 1 from the current cell
                     for(int checkColumn = -1; checkColumn < 2; checkColumn++)
                     {
+                        // attempt to find neighbor, throw out of bound exception when fail
                         try
                         {
                             if (grid[row + checkRow, column + checkColumn].Mine)
+                            {
                                 nearByBomb++;
+                            }
                         }
                         catch (IndexOutOfRangeException) { }
                     }
@@ -94,19 +98,29 @@ namespace MineSweep
             }
             
         }
-        override
-        public String ToString()
+        
+        // printing out the layout of the grid
+        public override String ToString()
         {
             String summary = "";
-            for (int i = 0; i < GetCells().GetLength(0); i++)
+            for (int i = 0; i < grid.GetLength(0); i++)
             {
-                for (int j = 0; j < GetCells().GetLength(1); j++)
+                for (int j = 0; j < grid.GetLength(1); j++)
                 {
-                    summary += GetCells()[i, j].ToString() + "\r\n";
+                    if(grid[i, j].Mine)
+                    {
+                        summary += "[B]";
+                    }
+                    else
+                    {
+                        summary += "[" + grid[i, j].AdjMines + "]";
+                    }
+
+                    //summary += GetCells()[i, j].ToString() + "\r\n";
                 }
+                summary += "\n";
             }
             return summary;
-            
         }
 
 
