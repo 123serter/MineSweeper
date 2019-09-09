@@ -1,0 +1,14 @@
+C:\Users\corn_\source\repos\MineSweep\MineSweep\bin\Debug\MineSweep.exe.config
+C:\Users\corn_\source\repos\MineSweep\MineSweep\bin\Debug\MineSweep.exe
+C:\Users\corn_\source\repos\MineSweep\MineSweep\bin\Debug\MineSweep.pdb
+C:\Users\corn_\source\repos\MineSweep\MineSweep\obj\Debug\MineSweep.csprojAssemblyReference.cache
+C:\Users\corn_\source\repos\MineSweep\MineSweep\obj\Debug\MineSweep.csproj.CoreCompileInputs.cache
+C:\Users\corn_\source\repos\MineSweep\MineSweep\obj\Debug\MineSweep.exe
+C:\Users\corn_\source\repos\MineSweep\MineSweep\obj\Debug\MineSweep.pdb
+F:\VS projects\AllMineSweeper\MineSweep\MineSweep\bin\Debug\MineSweep.exe.config
+F:\VS projects\AllMineSweeper\MineSweep\MineSweep\bin\Debug\MineSweep.exe
+F:\VS projects\AllMineSweeper\MineSweep\MineSweep\bin\Debug\MineSweep.pdb
+F:\VS projects\AllMineSweeper\MineSweep\MineSweep\obj\Debug\MineSweep.csprojAssemblyReference.cache
+F:\VS projects\AllMineSweeper\MineSweep\MineSweep\obj\Debug\MineSweep.csproj.CoreCompileInputs.cache
+F:\VS projects\AllMineSweeper\MineSweep\MineSweep\obj\Debug\MineSweep.exe
+F:\VS projects\AllMineSweeper\MineSweep\MineSweep\obj\Debug\MineSweep.pdb
